@@ -7,16 +7,16 @@ def main(filename, key_ID):
     with open(key_ID + ".key", 'rb') as filekey:
         key = filekey.read()
 
-    fernet = fnet(key)
+    fernet = fnet(key)  # encryption key
 
-    with open(filename, rb) as file:
+    with open(filename, rb) as file:  # read in original file
         original = file.read()
 
-    encrypted = fernet.encrypt(original)
+    encrypted = fernet.encrypt(original)  # encrypt
 
-    with open(filename, wb) as encrypted_file:
+    with open(filename, wb) as encrypted_file:  # write back to file as encrypted
         encrypted_file.write(encrypted)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # init
     main(sys.argv[1], sys.argv[2])
