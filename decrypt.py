@@ -2,9 +2,7 @@ from cryptography.fernet import Fernet as fnet
 import sys
 
 
-def decrypt(filename, key_ID):
-    key_path = "keys/" + key_ID + ".key"
-
+def decrypt(filename, key_path):
     with open(key_path, 'rb') as filekey:
         key = filekey.read()
 

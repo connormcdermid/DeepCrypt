@@ -2,8 +2,9 @@ from tkinter import *
 from tkinter.filedialog import *
 from tkinter.ttk import *
 from tkinter import filedialog as fdialogue
-import encrypt
-import decrypt
+from encrypt import encrypt
+from decrypt import decrypt
+from keygen import keygen
 
 root = Tk()
 root.title("Deep_Crypt File Service")
@@ -18,10 +19,15 @@ def closeMainFrame():
 
 def encryptButtonClicked():
   filename = askopenfilename(initialdir = "/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
+  key_file = askopenfilename(initialdir="keys/", title="Select a Key",
+                             filetypes=(("Key Files", "*.key*"), ("All Files", "*.*")))
+  encrypt(filename, key_file)
   
 def decryptButtonClicked():
   filename = askopenfilename(initialdir = "/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
-  #Connect decryption code here
+  key_file = askopenfilename(initialdir="keys/", title="Select a Key",
+                             filetypes=(("Key Files", "*.key*"), ("All Files", "*.*")))
+  decrypt(filename, key_file)
 
 def keygenButtonClicked():
   top = Toplevel(root)
@@ -30,6 +36,7 @@ def keygenButtonClicked():
 
   def closeKeyGenWindow():
     top.destroy()
+    keygen(textEntry.get())
 
   textEntry = StringVar()
 
