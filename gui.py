@@ -7,7 +7,7 @@ from decrypt import decrypt
 from keygen import keygen
 
 root = Tk()
-root.title("Deep_Crypt File Service")
+root.title("DeepCrypt")
 root.geometry("200x150")
 
 mainFrame = Frame(root)
