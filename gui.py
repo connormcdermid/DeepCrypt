@@ -18,7 +18,9 @@ def decryptButtonClicked():
 root.title("Deep_Crypt File Service")
         
 encrypt_button = Button (root, text = "Encrypt", command = encryptButtonClicked)
+decrypt_button = Button (root, text = "Decrypt", command = decryptButtonClicked)
 
 encrypt_button.place(x=20, y=50)
-        
+decrypt_button.place(x=50, y=50)
+
 root.mainloop()
