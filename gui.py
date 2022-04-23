@@ -24,14 +24,22 @@ def encryptButtonClicked():
 def decryptButtonClicked():
   filename = askopenfilename(initialdir = "/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
   #Connect decryption code here
+
+def keygenButtonClicked():
+
+
+
+
         
 encrypt_button = Button (root, text = "Encrypt", command = encryptButtonClicked)
 decrypt_button = Button (root, text = "Decrypt", command = decryptButtonClicked)
+keygen_button = Button(root, text="Generate Key", command=keygenButtonClicked())
 close_button = Button (root, text = "Close", command = closeWindow())
-entry = ttk.Entry(mainFrame, width=7, textvariable = entryText)
+entry = Entry(mainFrame, width=7, textvariable = entryText)
 
 encrypt_button.place(x=20, y=50)
 decrypt_button.place(x=20, y=80)
+keygen_button.place(x=20, y=110)
 entry.place(x=20, y=110)
 close_button.place(anchor="ne")
 
