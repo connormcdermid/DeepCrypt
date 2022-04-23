@@ -1,4 +1,5 @@
-from tkinter import * 
+from tkinter import *
+from tkinter.filedialog import *
 from tkinter.ttk import *
 from tkinter import filedialog as fdialogue
 import encrypt
@@ -9,9 +10,10 @@ root = Tk()
 root.geometry("200x150")
 frame = Frame(root)
 frame.grid()
+frame.attributes("-fullscreen", 1)
 
 def encryptButtonClicked():
-  filename = fdialogue.askopenfilename(initialdir = "/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
+  filename = askopenfilename(initialdir = "/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
   
 def decryptButtonClicked():
   filename = fdialogue.askopenfilename(initialdir = "/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
