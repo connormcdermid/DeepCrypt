@@ -13,19 +13,24 @@ root.attributes("-fullscreen", 1)
 mainFrame = Frame(root)
 mainFrame.grid()
 
+def closeWindow():
+  root.destroy()
+
 def encryptButtonClicked():
   filename = askopenfilename(initialdir = "/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
   
 def decryptButtonClicked():
-  filename = fdialogue.askopenfilename(initialdir = "/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
+  filename = askopenfilename(initialdir = "/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
   #Connect decryption code here
 
 
         
 encrypt_button = Button (root, text = "Encrypt", command = encryptButtonClicked)
 decrypt_button = Button (root, text = "Decrypt", command = decryptButtonClicked)
+close_button = Button (root, text = "Close", command = closeWindow())
 
 encrypt_button.place(x=20, y=50)
 decrypt_button.place(x=20, y=80)
+close_button.place(anchor="ne")
 
 root.mainloop()
