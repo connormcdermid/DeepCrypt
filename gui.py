@@ -8,7 +8,6 @@ import decrypt
 root = Tk()
 root.title("Deep_Crypt File Service")
 root.geometry("200x150")
-root.attributes("-fullscreen", 1)
 
 mainFrame = Frame(root)
 mainFrame.grid()
@@ -26,7 +25,10 @@ def decryptButtonClicked():
   #Connect decryption code here
 
 def keygenButtonClicked():
-  print("placeholder")
+  top = Toplevel(root)
+  top.geometry("200x150")
+  top.title("Key Generation")
+  Label(top, text= "Enter your key's name").place(x=20,y=50)
         
 encrypt_button = Button (root, text = "Encrypt", command = encryptButtonClicked)
 decrypt_button = Button (root, text = "Decrypt", command = decryptButtonClicked)
