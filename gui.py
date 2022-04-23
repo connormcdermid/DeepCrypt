@@ -4,17 +4,17 @@ from tkinter.ttk import *
 root = Tk()
 
 def encryptButtonClicked():
-  #Connect code for encryption button here 
-  print("hello")
+  filename = fdialogue.askopenfilename(initialdir = "/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
+  #Connect encryption code here
   
 def decryptButtonClicked():
-  #Connect code for decryption button here
-  print("hello)
-
+  filename = fdialogue.askopenfilename(initialdir = "/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
+  #Connect decryption code here
+  
 root.title("Deep_Crypt File Service")
         
 encrypt_button = Button (root, text = "Encrypt", command = encryptButtonClicked)
 
-encrypt_button.place(x=20, y=40)
+encrypt_button.place(x=20, y=50)
         
 root.mainloop()
