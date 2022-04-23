@@ -13,6 +13,8 @@ root.attributes("-fullscreen", 1)
 mainFrame = Frame(root)
 mainFrame.grid()
 
+entryText = StringVar()
+
 def closeWindow():
   root.destroy()
 
@@ -22,15 +24,15 @@ def encryptButtonClicked():
 def decryptButtonClicked():
   filename = askopenfilename(initialdir = "/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
   #Connect decryption code here
-
-
         
 encrypt_button = Button (root, text = "Encrypt", command = encryptButtonClicked)
 decrypt_button = Button (root, text = "Decrypt", command = decryptButtonClicked)
 close_button = Button (root, text = "Close", command = closeWindow())
+entry = ttk.Entry(mainFrame, width=7, textvariable = entryText)
 
 encrypt_button.place(x=20, y=50)
 decrypt_button.place(x=20, y=80)
+entry.place(x=20, y=110)
 close_button.place(anchor="ne")
 
 root.mainloop()
