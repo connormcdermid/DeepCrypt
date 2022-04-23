@@ -20,6 +20,18 @@ mainFrame.grid()
 def closeMainFrame():
     root.destroy()
 
+def displayHelp():
+    helpWindow = Toplevel(root)
+    helpWindow.configure(bg="#414141")
+    helpWindow.title("Help")
+
+    def closeHelpWindow():
+        helpWindow.destroy()
+
+    Label(helpWindow, text="To encrypt a file, select \"Encrypt\", then your file, and then the key to encrypt with.").grid(column=1, row=1)
+    Label(helpWindow, text="To decrypt a file, select \"Decrypt\", then your file, then the key to decrypt with.").grid(column=1, row=2)
+    Label(helpWindow, text="Don't have an encryption key? Generate one with \"Generate Key\". Name it, and find it in the \"Keys\" folder.").grid(column=1, row=3)
+    Label(helpWindow, text="Keep this key in a safe place, but don't lose it -- without it, you can never decrypt your files.").grid(column=1, row=4)
 
 def encryptButtonClicked():
     filename = askopenfilename(initialdir="./", title="Select a File",
@@ -59,9 +71,11 @@ def keygenButtonClicked():
 encrypt_button = Button(root, text="Encrypt", command=encryptButtonClicked)
 decrypt_button = Button(root, text="Decrypt", command=decryptButtonClicked)
 keygen_button = Button(root, text="Generate Key", command=keygenButtonClicked)
+help_button = Button(root, text="Help", command=displayHelp)
 
 encrypt_button.grid(column=1, row=1)
 decrypt_button.grid(column=2, row=1)
-keygen_button.grid(column=1, row=2, columnspan=2)
+keygen_button.grid(column=1, row=2)
+help_button.grid(column=2, row=2)
 
 root.mainloop()
