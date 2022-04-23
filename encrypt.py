@@ -3,8 +3,10 @@ import sys
 
 
 def main(filename, key_ID):
+    # find key path
+    key_path = "keys/" + key_ID + ".key"
     # read key
-    with open(key_ID + ".key", 'rb') as filekey:
+    with open(key_path, 'rb') as filekey:
         key = filekey.read()
 
     fernet = fnet(key)  # encryption key
