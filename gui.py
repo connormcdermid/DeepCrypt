@@ -31,7 +31,7 @@ def decryptButtonClicked():
 
 def keygenButtonClicked():
   top = Toplevel(root)
-  top.geometry("400x400")
+  top.geometry("100x75")
   top.title("Key Generation")
 
   def closeKeyGenWindow():
@@ -42,10 +42,10 @@ def keygenButtonClicked():
 
   e = Entry(top, textvariable=textEntry, width=10)
 
-  Label(top, text= "Enter your key's name").place(x=20,y=50)
-  e.place(x=20, y=100)
-  confirm_button = Button (top, text="Confirm", command=closeKeyGenWindow)
-  confirm_button.place(x=20, y=120)
+  Label(top, text= "Enter your key's name").grid(column=1, row=1)
+  e.grid(column=1, row=2)
+  confirm_button = Button (top, text="Confirm", command=closeKeyGenWindow, )
+  confirm_button.grid(column=1, row=3)
 
         
 encrypt_button = Button (root, text = "Encrypt", command = encryptButtonClicked)
