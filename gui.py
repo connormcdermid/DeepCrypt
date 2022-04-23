@@ -10,8 +10,8 @@ root.title("Deep_Crypt File Service")
 root.geometry("200x150")
 
 mainFrame = Frame(root)
-mainFrame.grid()
 mainFrame.attributes("-fullscreen", 1)
+mainFrame.grid()
 
 def encryptButtonClicked():
   filename = askopenfilename(initialdir = "/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
