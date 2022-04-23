@@ -1,5 +1,6 @@
 from tkinter import * 
 from tkinter.ttk import *
+from tkinter import filedialog as fdialogue
 
 root = Tk()
 
@@ -21,6 +22,6 @@ encrypt_button = Button (root, text = "Encrypt", command = encryptButtonClicked)
 decrypt_button = Button (root, text = "Decrypt", command = decryptButtonClicked)
 
 encrypt_button.place(x=20, y=50)
-decrypt_button.place(x=50, y=50)
+decrypt_button.place(x=20, y=80)
 
 root.mainloop()
