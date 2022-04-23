@@ -2,7 +2,7 @@ from cryptography.fernet import Fernet as fnet
 import sys
 
 
-def main(filename, key_ID):
+def encrypt(filename, key_ID):
     # find key path
     key_path = "keys/" + key_ID + ".key"
     # read key
@@ -25,4 +25,4 @@ def main(filename, key_ID):
 
 
 if __name__ == "__main__":  # init
-    main(sys.argv[1], sys.argv[2])
+    encrypt(sys.argv[1], sys.argv[2])

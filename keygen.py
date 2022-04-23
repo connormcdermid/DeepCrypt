@@ -2,7 +2,7 @@ import sys
 from cryptography.fernet import Fernet as fnet
 
 
-def main(key_ID):
+def keygen(key_ID):
     key_path = "keys/" + key_ID + ".key"
     key = fnet.generate_key()
 
@@ -11,4 +11,4 @@ def main(key_ID):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    keygen(sys.argv[1])

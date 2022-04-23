@@ -1,6 +1,8 @@
 from tkinter import * 
 from tkinter.ttk import *
 from tkinter import filedialog as fdialogue
+import encrypt
+import decrypt
 
 root = Tk()
 
@@ -10,7 +12,6 @@ frame.grid()
 
 def encryptButtonClicked():
   filename = fdialogue.askopenfilename(initialdir = "/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
-  #Connect encryption code here
   
 def decryptButtonClicked():
   filename = fdialogue.askopenfilename(initialdir = "/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))

@@ -2,8 +2,10 @@ from cryptography.fernet import Fernet as fnet
 import sys
 
 
-def decrypt(filename, key):
-    with open(key + ".key", 'rb') as filekey:
+def decrypt(filename, key_ID):
+    key_path = "keys/" + key_ID + ".key"
+
+    with open(key_path, 'rb') as filekey:
         key = filekey.read()
 
     fernet = fnet(key)
@@ -14,3 +16,6 @@ def decrypt(filename, key):
 
     with open(filename, 'wb') as encrypted_file:
         encrypted_file.write(decrypt)
+
+if __name__ == "__main__":
+    decrypt(sys.argv[1], sys.argv[2])
