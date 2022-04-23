@@ -22,10 +22,6 @@ def main(filename, key_ID):
 
 
 
-def decrypt(message, key):
-    f = key
-    token = f.encrypt(message)
-    return (f.decrypt(token))
 
 
 if __name__ == "__main__":  # init
