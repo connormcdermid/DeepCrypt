@@ -18,13 +18,13 @@ def closeMainFrame():
 
 
 def encryptButtonClicked():
-  filename = askopenfilename(initialdir = "documents/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
+  filename = askopenfilename(initialdir = "./", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
   key_file = askopenfilename(initialdir="keys/", title="Select a Key",
                              filetypes=(("Key Files", "*.key*"), ("All Files", "*.*")))
   encrypt(filename, key_file)
   
 def decryptButtonClicked():
-  filename = askopenfilename(initialdir = "documents/", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
+  filename = askopenfilename(initialdir = "./", title = "Select a File", filetypes = (("Text files", "*.txt*"), ("all files", "*.*")))
   key_file = askopenfilename(initialdir="keys/", title="Select a Key",
                              filetypes=(("Key Files", "*.key*"), ("All Files", "*.*")))
   decrypt(filename, key_file)
