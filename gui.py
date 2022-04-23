@@ -33,11 +33,12 @@ def keygenButtonClicked():
 
   textEntry = StringVar()
 
-  e = ttk.Entry(top, textvariable=textEntry, width=10)
+  e = Entry(top, textvariable=textEntry, width=10)
 
   Label(top, text= "Enter your key's name").place(x=20,y=50)
   e.place(x=20, y=100)
   confirm_button = Button (top, text="Confirm", command=closeKeyGenWindow)
+  confirm_button.place(x=20, y=120)
 
         
 encrypt_button = Button (root, text = "Encrypt", command = encryptButtonClicked)
