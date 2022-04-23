@@ -9,12 +9,12 @@ def main(filename, key_ID):
 
     fernet = fnet(key)  # encryption key
 
-    with open(filename, rb) as file:  # read in original file
+    with open(filename, 'rb') as file:  # read in original file
         original = file.read()
 
     encrypted = fernet.encrypt(original)  # encrypt
 
-    with open(filename, wb) as encrypted_file:  # write back to file as encrypted
+    with open(filename, 'wb') as encrypted_file:  # write back to file as encrypted
         encrypted_file.write(encrypted)
 
 
