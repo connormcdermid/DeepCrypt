@@ -13,8 +13,6 @@ root.attributes("-fullscreen", 1)
 mainFrame = Frame(root)
 mainFrame.grid()
 
-entryText = StringVar()
-
 def closeWindow():
   root.destroy()
 
@@ -32,12 +30,10 @@ encrypt_button = Button (root, text = "Encrypt", command = encryptButtonClicked)
 decrypt_button = Button (root, text = "Decrypt", command = decryptButtonClicked)
 keygen_button = Button(root, text="Generate Key", command=keygenButtonClicked)
 close_button = Button (root, text = "Close", command = closeWindow)
-entry = Entry(mainFrame, width=7, textvariable = entryText)
 
 encrypt_button.place(x=20, y=50)
 decrypt_button.place(x=20, y=80)
 keygen_button.place(x=20, y=110)
-entry.place(x=20, y=110)
-close_button.place(anchor="ne")
+close_button.place(side=TOP, anchor="ne")
 
 root.mainloop()
