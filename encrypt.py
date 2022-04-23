@@ -18,5 +18,13 @@ def main(filename, key_ID):
         encrypted_file.write(encrypted)
 
 
+
+def decrypt(message, key):
+    f = key
+    token = f.encrypt(message)
+    return (f.decrypt(token))
+
+
+
 if __name__ == "__main__":
     main(sys.argv[1], sys.argv[2])
