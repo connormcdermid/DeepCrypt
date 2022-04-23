@@ -8,9 +8,9 @@ import decrypt
 root = Tk()
 root.title("Deep_Crypt File Service")
 root.geometry("200x150")
+root.attributes("-fullscreen", 1)
 
 mainFrame = Frame(root)
-mainFrame.attributes("-fullscreen", 1)
 mainFrame.grid()
 
 def encryptButtonClicked():
