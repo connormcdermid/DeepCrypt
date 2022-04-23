@@ -36,6 +36,6 @@ close_button = Button (root, text = "Close", command = closeWindow)
 encrypt_button.place(x=20, y=50)
 decrypt_button.place(x=20, y=80)
 keygen_button.place(x=20, y=110)
-close_button.place(side=TOP, anchor="ne")
+close_button.grid(sticky="nw")
 
 root.mainloop()
