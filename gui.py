@@ -8,9 +8,10 @@ from decrypt import decrypt
 from keygen import keygen
 from ttkthemes import ThemedTk
 
+
 root = ThemedTk(theme="black")
 root.configure(bg="#414141")
-root.title("Deep_Crypt File Service")
+root.title("DeepCrypt")
 
 mainFrame = Frame(root)
 mainFrame.grid()

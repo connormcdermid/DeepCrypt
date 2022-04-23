@@ -1,4 +1,3 @@
-from cryptography.fernet import Fernet as fnet
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 import sys
 
