@@ -26,15 +26,12 @@ def decryptButtonClicked():
   #Connect decryption code here
 
 def keygenButtonClicked():
-
-
-
-
+  print("placeholder")
         
 encrypt_button = Button (root, text = "Encrypt", command = encryptButtonClicked)
 decrypt_button = Button (root, text = "Decrypt", command = decryptButtonClicked)
-keygen_button = Button(root, text="Generate Key", command=keygenButtonClicked())
-close_button = Button (root, text = "Close", command = closeWindow())
+keygen_button = Button(root, text="Generate Key", command=keygenButtonClicked)
+close_button = Button (root, text = "Close", command = closeWindow)
 entry = Entry(mainFrame, width=7, textvariable = entryText)
 
 encrypt_button.place(x=20, y=50)
